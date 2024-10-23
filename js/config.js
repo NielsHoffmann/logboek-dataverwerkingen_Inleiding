@@ -4,10 +4,10 @@ var respecConfig = {
   specStatus: "WV",
   specType: "PR",
   pubDomain: "api",
-  shortName: "Logboek_Juridisch",
-  publishDate: "2024-09-25",
-  publishVersion: "0.8.2",
-  title: "Juridisch Beleidskader - Logboek Dataverwerking",
+  shortName: "Logboek_Algemeen",
+  publishDate: "2024-10-23",
+  publishVersion: "0.1.0",
+  title: "Algemene inleiding - Logboek dataverwerkingen",
   // previousPublishVersion: "(none)",
   // content: {"ch01": "informative", "ch02": "", "mermaid": ""},
   editors:
@@ -22,16 +22,9 @@ var respecConfig = {
         company: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
         companyURL: "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties",
       },
-      {
-        name: "Jeroen Mulder",
-        company: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
-        companyURL: "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties",
-      },
-      {
-        name: "Pieter Teekens",
-        company: "Ministerie van Binnelandse Zaken en Koninkrijksrelaties",
-        companyURL: "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties",
-      },
+    ],
+  authors:
+    [
       {
         name: "Nil Barua",
         company: "Logius",
@@ -41,20 +34,12 @@ var respecConfig = {
         name: "Martin van der Plas",
         company: "Logius",
         companyURL: "https://github.com/Logius-standaarden",
-      }
-    ],
-  authors:
-    [
+      },
       {
-        name: "Wouter Diephuis",
+        name: "Jeroen Mulder",
         company: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
         companyURL: "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties",
       },
-      {
-        name: "Mirian van Ansem",
-        company: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
-        companyURL: "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties",
-      }
     ],
   github: "https://github.com/Logius-standaarden/logboek-dataverwerkingen_Juridisch-beleidskader",
 
@@ -63,7 +48,7 @@ var respecConfig = {
   alternateFormats: [
       {
           label: "pdf",
-          uri: "Juridisch_Beleidskader-Logboek_Dataverwerking.pdf",
+          uri: "Algemene_inleiding-Logboek_Dataverwerking.pdf",
       },
   ],
   postProcess: [window.respecMermaid.createFigures]

@@ -22,7 +22,6 @@ De standaard Logboek Dataverwerkingen beschrijft een manier om technisch interop
 - het aan elkaar relateren van logs van dataverwerkingen
 - het aan elkaar relateren van dataverwerkingen over de grenzen van systemen
 
-
 ## Overzicht
 
 De Logboek Dataverwerkingen standaard bestaat uit de volgende documenten:
