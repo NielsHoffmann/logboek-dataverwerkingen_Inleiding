@@ -129,3 +129,23 @@ De volgende gegevens worden gelogd in de diverse logmomenten:
 |foreignOperation.traceId	|8a1325a32aef8de4ffba7d7c931eeaec|
 |foreignOperation.operationId	|ba7cac7ca0489e42|
 
+**5.	Log wijzigenKenteken (log vergunningenapplicatie)**
+
+| Attribuut   | Waarde   |
+|-------------|----------|
+| operationId	|7a95b6989d2b28c7|
+|operationName	|wijzigenKenteken|
+|parentOperationId	|`<leeg>`|
+|traceId	|f176a58de7fe249ea37ed4f5979da02b|
+|startTime	|2024-07-29 08:17:02.000|
+|endTime	|2024-07-29 08:17:02.000|
+|statusCode	|OK|
+|resource.name	|Parkeeradmin|
+|resource.version	|2.1.6|
+|receiver	|`<leeg>`|
+|attributeKey	|dplCoreProcessingActivityId|
+|attributeValue	|0b1ff20a-3ecb-34bf-8cf5-e4cbacb046ab|
+|attributeKey	|dplCoreDataSubjectId|
+|attributeValue	|`<leeg>`|
+|foreignOperation.traceId	|c0a7a38d56f3f16a2163ca0071d3779a|
+|foreignOperation.operationId	|df524ee2a3fd5ddf|
