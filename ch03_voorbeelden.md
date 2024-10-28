@@ -49,10 +49,4 @@ De volgende gegevens worden gelogd in de diverse logmomenten:
 
 **1.	Log opvragenVergunningen (log vergunningenapplicatie):**
 
-|Attribuut | Waarde | 
-|----|----|----|---|---|
-|Intake RFC|Beheer|Beheer legt issue voor aan TO of hoger Gremium | - | ter Beoordeling|
-|Beoordelen_RFC|TO / Progr. tafel / Progr. Raad|Het Gremium beoordeelt het issue en geeft aan of dit moet worden uitgewerkt|ter Beoordeling | in Bewerking |
-|Uitwerken|Beheer| Uitwerking RFC  |in Bewerking | ter Goedkeuring|
-|Beoordelen|TO | Het TO beoordeelt de uitwerking en geeft aan of de RFC moet worden doorgevoerd |ter Goedkeuring | Gereed |
-|Doorvoeren RFC| Beheer|  Beheer voert de RFC door  |Gereed  | Klaar voor release|
+
