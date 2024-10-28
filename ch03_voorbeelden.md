@@ -60,11 +60,11 @@ De volgende gegevens worden gelogd in de diverse logmomenten:
 | statusCode	| OK| 
 | resource.name	| Parkeeradmin| 
 | resource.version	| 2.1.6| 
-| receiver	| <leeg>| 
+| receiver	| <leeg> | 
 | attributeKey	| dplCoreProcessingActivityId| 
 | attributeValue	| 12f2ec2a-0cc4-3541-9ae6-219a178fcfe4| 
-| attributeKey	| <leeg>| 
-| attributeValue	| <leeg>| 
+| attributeKey	| <leeg> | 
+| attributeValue	| <leeg> | 
 | foreignOperation.traceId	| bc9126aaae813fd491ee10bf870db292| 
 | foreignOperation.operationId	| b2e339a595246e01| 
 
