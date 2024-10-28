@@ -51,22 +51,20 @@ De volgende gegevens worden gelogd in de diverse logmomenten:
 
 | Attribuut   | Waarde   |
 |-------------|----------|
-| Attribuut1  | Waarde 1 |
-| Attribuut2  | Waarde 2 |
-| Attribuut3  | Waarde 3 |
-| Attribuut1  | Waarde 1 |
-| Attribuut2  | Waarde 2 |
-| Attribuut3  | Waarde 3 |
-| Attribuut1  | Waarde 1 |
-| Attribuut2  | Waarde 2 |
-| Attribuut3  | Waarde 3 |
-| Attribuut1  | Waarde 1 |
-| Attribuut2  | Waarde 2 |
-| Attribuut3  | Waarde 3 |
-| Attribuut1  | Waarde 1 |
-| Attribuut2  | Waarde 2 |
-| Attribuut3  | Waarde 3 |
-| Attribuut1  | Waarde 1 |
-| Attribuut2  | Waarde 2 |
-| Attribuut3  | Waarde 3 |
-| Attribuut1  | Waarde 1 |
+| operationId	| |8ee7b01aca8d01d9 |
+operationName	opvragenVergunningen
+parentOperationId	<leeg>
+traceId	c6adf4df949d03c662b53e95debdc411
+startTime	2024-07-29 08:16:49.000
+endTime	2024-07-29 08:16:49.000
+statusCode	OK
+resource.name	Parkeeradmin
+resource.version	2.1.6
+receiver	<leeg>
+attributeKey	dplCoreProcessingActivityId
+attributeValue	12f2ec2a-0cc4-3541-9ae6-219a178fcfe4
+attributeKey	<leeg>
+attributeValue	<leeg>
+foreignOperation.traceId	bc9126aaae813fd491ee10bf870db292
+foreignOperation.operationId	b2e339a595246e01
+
