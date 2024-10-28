@@ -68,4 +68,22 @@ De volgende gegevens worden gelogd in de diverse logmomenten:
 | foreignOperation.traceId	| bc9126aaae813fd491ee10bf870db292| 
 | foreignOperation.operationId	| b2e339a595246e01| 
 
+**2.	Log tonenVergunningen (log gemeente)**
+
+| Attribuut   | Waarde   |
+|-------------|----------|
+| operationId	| b2e339a595246e01| 
+| operationName	| tonenVergunningen| 
+| parentOperationId	| `<leeg>`| 
+| traceId	| bc9126aaae813fd491ee10bf870db292| 
+| startTime	| 2024-07-29 10:16:49.690| 
+| endTime	| 2024-07-29 10:16:49.723| 
+| statusCode	| OK| 
+| resource.name	| MijnOmgeving| 
+| resource.version	| 1.0.5| 
+| receiver	| 27fdey98605etc48| 
+| attributeKey	| dplCoreProcessingActivityId| 
+| attributeValue	| 11x2ec2a-0774-3541-9b16-21ba179fcf15| 
+| attributeKey	| dplCoreDataSubjectId| 
+| attributeValue	| 13j2ec27-0cc4-3541-9av6-219a178fcfe5| 
 
