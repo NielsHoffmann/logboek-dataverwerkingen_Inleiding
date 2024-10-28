@@ -48,5 +48,5 @@ Schematisch ziet dit proces er als volgt uit:
 De volgende gegevens worden gelogd in de diverse logmomenten:
 
 **1.	Log opvragenVergunningen (log vergunningenapplicatie):**
-|**Attribuut**|**Waarde**|
-||||
+|**Attribuut** |**Waarde** |
+|----|----|----|---|---|
