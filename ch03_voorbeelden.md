@@ -43,3 +43,8 @@ o dataSubject
 
 Schematisch ziet dit proces er als volgt uit:
 ![Alt text](./medias/SchematischProces_Parkeervergunning_Scenario_Logboek.png)
+
+### Logging van gegevens
+De volgende gegevens worden gelogd in de diverse logmomenten:
+1.	Log opvragenVergunningen (log vergunningenapplicatie):
+
