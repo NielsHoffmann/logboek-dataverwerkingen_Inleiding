@@ -49,4 +49,9 @@ De volgende gegevens worden gelogd in de diverse logmomenten:
 
 **1.	Log opvragenVergunningen (log vergunningenapplicatie):**
 
+| Attribuut   | Waarde   |
+|-------------|----------|
+| Attribuut1  | Waarde 1 |
+| Attribuut2  | Waarde 2 |
+| Attribuut3  | Waarde 3 |
 
