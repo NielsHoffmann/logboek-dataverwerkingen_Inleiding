@@ -51,8 +51,8 @@ De volgende gegevens worden gelogd in de diverse logmomenten:
 
 | Attribuut   | Waarde   |
 |-------------|----------|
-| operationId	| |8ee7b01aca8d01d9 |
-operationName	opvragenVergunningen
+| operationId	| 8ee7b01aca8d01d9 | 
+| operationName| 	opvragenVergunningen| 
 parentOperationId	<leeg>
 traceId	c6adf4df949d03c662b53e95debdc411
 startTime	2024-07-29 08:16:49.000
@@ -67,4 +67,5 @@ attributeKey	<leeg>
 attributeValue	<leeg>
 foreignOperation.traceId	bc9126aaae813fd491ee10bf870db292
 foreignOperation.operationId	b2e339a595246e01
+
 
