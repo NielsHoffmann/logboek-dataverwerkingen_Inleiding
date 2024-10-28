@@ -149,3 +149,27 @@ De volgende gegevens worden gelogd in de diverse logmomenten:
 |attributeValue	|`<leeg>`|
 |foreignOperation.traceId	|c0a7a38d56f3f16a2163ca0071d3779a|
 |foreignOperation.operationId	|df524ee2a3fd5ddf|
+
+
+**6.	Log wijzigenKenteken (log gemeente)**
+
+| Attribuut   | Waarde   |
+|-------------|----------|
+| operationId	|df524ee2a3fd5ddf|
+|operationName	|wijzigenKenteken|
+|parentOperationId	|`<leeg>`|
+|traceId	|c0a7a38d56f3f16a2163ca0071d3779a|
+|startTime	|2024-07-29 10:17:02.010|
+|endTime	|2024-07-29 10:17:02.039|
+|statusCode	|OK|
+|resource.name	|MijnOmgeving|
+|resource.version	|1.0.5|
+|receiver	|27fdey98605etc48|
+|attributeKey	|dplCoreProcessingActivityId|
+|attributeValue	|12c21c2a-0875-3543-9b16-21ja179fcf16|
+|attributeKey	|dplCoreDataSubjectId|
+|attributeValue	|13j2ec27-0cc4-3541-9av6-219a178fcfe5|
+|foreignOperation.traceId	|`<leeg>`|
+|foreignOperation.operationId	|`<leeg>`|
+
+
