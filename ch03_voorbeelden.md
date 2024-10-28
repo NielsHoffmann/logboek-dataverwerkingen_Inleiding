@@ -87,3 +87,23 @@ De volgende gegevens worden gelogd in de diverse logmomenten:
 | attributeKey	| dplCoreDataSubjectId| 
 | attributeValue	| 13j2ec27-0cc4-3541-9av6-219a178fcfe5| 
 
+**3. Log controlerenKenteken (log RDW)**
+
+| Attribuut   | Waarde   |
+|-------------|----------|
+| operationId	|433f276975204ccf|
+|operationName	|controlerenKenteken|
+|parentOperationIdcontrolerenKenteken|`<leeg>`|
+|traceId	|8ccfd3c567c51d68937c263e00a352be|
+|startTime	|2024-07-29 08:17:02|
+|endTime	|2024-07-29 08:17:02|
+|statusCode	|OK|
+|resource.name	|BRV|
+|resource.version	|2.0|
+|receiver	|`<leeg>`|
+|attributeKey	|dplCoreProcessingActivityId|
+|attributeValue	|8c714e4a-a538-36f7-8b1f-37a6884cc68c|
+|attributeKey	|dplCoreDataSubjectId|
+|attributeValue	|`<leeg>`|
+|foreignOperation.traceId	|f176a58de7fe249ea37ed4f5979da02b|
+|foreignOperation.operationId	|414514cf1d40d6b2|
