@@ -50,7 +50,7 @@ o dataSubject
 15. De gemeente toont de gegevens aan de persoon en logt dat deze gegevens zijn getoond aan de persoon.
 
 Schematisch ziet dit proces er als volgt uit:
-![Alt text](./medias/SchematischProces_Parkeervergunning_Scenario_Logboek.png)
+![Alt text](./medias/Parkeervergunning_Wijzigen_SchematischProces.png)
 
 ### Logging van gegevens
 De volgende gegevens worden gelogd in de diverse logmomenten:
@@ -223,7 +223,7 @@ De volgende gegevens worden gelogd in de diverse logmomenten:
 
 ### Relatie tussen gegevens
 Om uiteindelijk alle gegevens te kunnen rapporteren, is het van belang dat gegevens op een bepaalde manier aan elkaar gekoppeld zijn. In dit voorbeeld zijn de gegevens op de volgende manier gekoppeld:
-![Alt text](./medias/RelatieTussenGegevens_ParkeervergunningInzien.png)
+![Alt text](./medias/Parkeervergunning_Wijzigen_RelatieGegevens.png)
 
 ### Relatie met de standaard Logboek Dataverwerkingen
 De relatie met de doelstellingen die gesteld zijn in de standaard Logboek dataverwerkingen worden, op basis van dit voorbeeld, als volgt concreet gerealiseerd:
