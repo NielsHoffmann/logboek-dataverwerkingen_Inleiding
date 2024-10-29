@@ -30,6 +30,7 @@ Schematisch ziet dit proces er als volgt uit:
 
 ### Logging van gegevens
 De volgende gegevens worden gelogd in de diverse logmomenten:
+
 **Log opvragenVergunningen (log vergunningenapplicatie):**
 | Attribuut   | Waarde   |
 |-------------|----------|
