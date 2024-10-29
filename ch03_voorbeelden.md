@@ -173,3 +173,42 @@ De volgende gegevens worden gelogd in de diverse logmomenten:
 |foreignOperation.operationId	|`<leeg>`|
 
 
+**7.	Log opvragenVergunningen (log vergunningenapplicatie)**
+
+| Attribuut   | Waarde   |
+|-------------|----------|
+| operationId	|6042d706f53fec76|
+|operationName	|opvragenVergunningen|
+|parentOperationId	|`<leeg>`|
+|traceId	|c6c2d53a5762d47779c57057d7983311|
+|startTime	|2024-07-29 08:17:02.000|
+|endTime	|2024-07-29 08:17:02.000|
+|statusCode	|OK|
+|resource.name	|Parkeeradmin|
+|resource.version	|2.1.6|
+|receiver	|`<leeg>`|
+|attributeKey	|dplCoreProcessingActivityId|
+|attributeValue	|12f2ec2a-0cc4-3541-9ae6-219a178fcfe4|
+|attributeKey	|`<leeg>`|
+|attributeValue	|`<leeg>`|
+|foreignOperation.traceId	|8a1325a32aef8de4ffba7d7c931eeaec|
+|foreignOperation.operationId	|ba7cac7ca0489e42|
+
+**8.	Log tonenVergunningen (log gemeente)**
+
+| Attribuut   | Waarde   |
+|-------------|----------|
+| operationId	|ba7cac7ca0489e42|
+|operationName	|tonenVergunningen|
+|parentOperationId	|`<leeg>`|
+|traceId	|8a1325a32aef8de4ffba7d7c931eeaec|
+|startTime	|2024-07-29 10:17:02.274|
+|endTime	|2024-07-29 10:17:02.291|
+|statusCode	|OK|
+|resource.name	|MijnOmgeving|
+|resource.version	|1.0.5|
+|receiver	|27fdey98605etc48|
+|attributeKey	|dplCoreProcessingActivityId|
+|attributeValue	|11x2ec2a-0774-3541-9b16-21ba179fcf15|
+|attributeKey	|dplCoreDataSubjectId|
+|attributeValue	|13j2ec27-0cc4-3541-9av6-219a178fcfe5|
