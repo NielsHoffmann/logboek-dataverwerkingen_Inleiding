@@ -27,3 +27,25 @@ o	dataSubject
 
 Schematisch ziet dit proces er als volgt uit:
 ![Alt text](./medias/Parkeervergunning_Inzien_SchematischProces.png)
+
+### Logging van gegevens
+De volgende gegevens worden gelogd in de diverse logmomenten:
+**Log opvragenVergunningen (log vergunningenapplicatie):**
+| Attribuut   | Waarde   |
+|-------------|----------|
+|operationId	|8451dcd9ede037cb|
+|operationName	|opvragenVergunningen|
+|parentOperationId	|`<leeg>`|
+|traceId	|ccf5064a324163ed939bfa09c2bcb210|
+|startTime	|2024-05-30 08:40:37.000|
+|endTime	|2024-05-30 08:40:37.000|
+|statusCode	|OK|
+|resource.name	|Parkeeradmin|
+|resource.version	|2.1.6|
+|receiver|	`<leeg>`|
+|attributeKey	|dplCoreProcessingActivityId|
+|attributeValue	|rva:12f2ec2a-0cc4-3541-9ae6-219a178fcfe4|
+|attributeKey	|`<leeg>`|
+|attributeValue	|`<leeg>`|
+|foreignOperation.traceId	|c7a26dcd0bee0c8900e2174c43c3393c|
+|foreignOperation.operationId|	9f8971bfd093637d|
