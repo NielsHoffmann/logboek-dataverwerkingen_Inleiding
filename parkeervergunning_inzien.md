@@ -26,3 +26,4 @@ o	dataSubject
 4.	De gemeente toont de gegevens aan de persoon en logt dat deze gegevens zijn getoond aan de persoon.
 
 Schematisch ziet dit proces er als volgt uit:
+![Alt text](./medias/Parkeervergunning_Inzien_SchematischProces.png)
