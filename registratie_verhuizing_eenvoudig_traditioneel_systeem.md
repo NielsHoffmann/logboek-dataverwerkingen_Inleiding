@@ -177,6 +177,7 @@ De relatie met de doelstellingen die gesteld zijn in de standaard Logboek datave
 **- het aan elkaar relateren van dataverwerkingen over de grenzen van systemen:** Naast het koppelen van logs van diverse applicaties, wordt ook een koppeling gelegd met het Register van verwerkingsactiviteiten. Dit gebeurt per applicatie op basis van het ProcessingActivityId (register) te koppelen aan dplCoreProcessingActivityId (logboek). De diverse registers hebben **geen** directe koppeling met elkaar.
 
 **Standaard Logverwerkingen: paragraaf 3.3.1 Gedrag**
+
 1.De applicatie MOET een Trace starten voor iedere Dataverwerking waarvan nog geen Trace bekend is. Bij elke start van een verwerking wordt een traceId aangemaakt. Bijvoorbeeld: in het voorbeeld komt er een bericht binnen bij de Balieapplicatie van de gemeente (tonenNAWGegevens). Er wordt direct een traceId aangemaakt.
 
 2.De applicatie MOET voor iedere Dataverwerking een logregel wegschrijven in een Logboek. Log Sampling is niet toegestaan. Een dataverwerking wordt opgeslagen als deze volledig is afgerond. In het voorbeeld is te zien dat een logregel wordt geschreven op het moment dat de vraag- en het antwoordbericht zijn afgerond.
@@ -186,3 +187,47 @@ De relatie met de doelstellingen die gesteld zijn in de standaard Logboek datave
 4.Als een Dataverwerking meerdere Betrokkenen heeft dan MOET de applicatie voor iedere betrokkene een aparte logregel wegschrijven. Een logregel kan naar 0 of 1 betrokkenen verwijzen. In het voorbeeld gaat het om één betrokkene (dplCoreDataSubjectId), er wordt steeds één logregel aangemaakt.
 
 5.Als een applicatie aangeroepen kan worden vanuit een andere applicatie MOET de applicatie Trace Context metadata accepteren bij een dergelijke aanroepen deze metadata kunnen omzetten naar een foreign_operation bericht. Bij een externe verwerking (bijvoorbeeld opvragenPersoonsgegevens) geeft de Balieapplicatie de traceId en OperationId mee aan het BRP-systeem. Het BRP-systeem registreert de traceId en operationId beide als ‘foreignOperation’.
+
+```mermaid
+sequenceDiagram
+    box ivory Baliemedewerker
+      participant B as Browser
+    end
+ 
+    box ivory Gemeente 
+      participant BA as Balieapplicatie
+      participant L1 as Log Gemeente
+    end 
+
+    box ivory BRP Registratie
+      participant BR as BRP
+      participant L2 as Log BRP
+    end 
+
+    rect lavender
+    B->>+BA: tonenNAWGegevensVraag
+    BA->>BR: opvragenPersoonsgegevensVraag
+    BR-->>BA: opvragenPersoonsgegevensAntwoord
+    BR->>L2: Log gegevensverwerking (opvragenPersoonsgegevens)
+    BA-->>B: tonenNAWGegevensAntwoord
+    BA->>L1: Log gegevensverwerking (tonenNAWGegegevens)
+    end
+
+    rect lavender
+    B->>BA: wijzigenNAWGegevensVraag
+    BA->>BR : wijzigenPersoonsgegevensVraag
+    BR-->>BR : wijzigenPersoonsgegevens
+    BR-->>BA: wijzigenPersoonsgegevensAntwoord
+    BR->>L2: Loggen verwerking (wijzigenPersoonsgegevens)
+    BA->>L1: Loggen verwerking (wijzigenPersoonsgegevens)
+    end
+
+    rect lavender
+    B->>BA: tonenNAWGegevensVraag
+    BA->>BR: opvragenPersoonsgegevensVraag
+    BR-->>BA: opvragenPersoonsgegevensAntwoord
+    BR->>L2: Loggen gegevensverwerking (opvragenPersoonsgegevens)
+    BA-->>B: tonenNAWGegevensAntwoord
+    BA->>L1: Loggen gegevensverwerking (tonenNAWGegevens)
+    End
+```
