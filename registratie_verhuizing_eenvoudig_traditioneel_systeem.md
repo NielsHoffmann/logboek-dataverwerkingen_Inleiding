@@ -14,6 +14,7 @@ Deze case beschrijft de binnengemeentelijke verhuizing van een persoon. De besch
 •	Een Loggingsregel wordt toegevoegd aan het logboek per **geheel** afgeronde transactie. Er wordt dus **geen** aparte logregel aangemaakt per ontvangen of verstuurd bericht.
 
 •	Een aantal gegevens staan nog ter discussie (vanuit juridisch oogpunt). Voor de volledigheid worden een aantal gegevens in dit voorbeeld meegenomen. Het betreft de gegevens:
+
   o	resource/name/version
   o	receiver
   o	dataSubject
