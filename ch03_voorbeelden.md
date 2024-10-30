@@ -695,6 +695,7 @@ Schematisch ziet dit proces er als volgt uit:
 5.	De gemeentelijke Balieapplicatie stuurt de gegevens naar de Browser en worden getoond aan de Baliemedewerker. De aanvraag wordt gelogd door de Balieapplicatie.
 
 Schematisch ziet dit proces er als volgt uit:
+
 ![Alt text](./medias/Registratie_VerhuizingOpvragenBSNs_SchematischProces.png)
 
 ### Logging van gegevens
