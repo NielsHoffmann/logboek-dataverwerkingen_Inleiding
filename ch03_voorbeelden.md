@@ -26,11 +26,11 @@ Een persoon heeft bij een gemeente een parkeervergunning in gebruik en wil de ge
 
 * Een aantal gegevens staan nog ter discussie (vanuit juridisch oogpunt). Voor de volledigheid worden een aantal gegevens in dit voorbeeld meegenomen. Het betreft de gegevens:
 
-o resource/name/version
+    o resource/name/version
 
-o receiver
+    o receiver
 
-o dataSubject
+    o dataSubject
 
 ### Globaal proces
 1. Een persoon vraagt in zijn 'MijnOmgeving' van de gemeente om de bestaande parkeervergunninggegevens.
