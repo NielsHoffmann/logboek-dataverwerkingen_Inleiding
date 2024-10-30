@@ -44,7 +44,7 @@ Schematisch ziet dit proces er als volgt uit:
 ### Logging van gegevens
 De volgende gegevens worden gelogd in de diverse logmomenten:
   
-  **1.	Log opvragenPersoonsgegevens (log BRP):**
+**1.	Log opvragenPersoonsgegevens (log BRP):**
 
 | Attribuut   | Waarde   |
 |-------------|----------|
