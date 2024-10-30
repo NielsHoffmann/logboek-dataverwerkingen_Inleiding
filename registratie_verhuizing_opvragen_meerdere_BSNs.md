@@ -16,7 +16,9 @@ Deze case beschrijft de samenstelling van een huishouding op een bepaald adres. 
 •	Een aantal gegevens staan nog ter discussie (vanuit juridisch oogpunt). Voor de volledigheid worden een aantal gegevens in dit voorbeeld meegenomen. Het betreft de gegevens:
 
   o	resource/name/version
+  
   o	receiver
+  
   o	dataSubject
   
 •	Het is optioneel om het BSN-nummer (dplCoreDataSubjectId) te versleutelen ten behoeve van extra gegevensbeveiliging. In dit voorbeeld wordt versleuteling van gegevens toegepast.
