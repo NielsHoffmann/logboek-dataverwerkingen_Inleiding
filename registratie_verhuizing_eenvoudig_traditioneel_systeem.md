@@ -16,7 +16,9 @@ Deze case beschrijft de binnengemeentelijke verhuizing van een persoon. De besch
 •	Een aantal gegevens staan nog ter discussie (vanuit juridisch oogpunt). Voor de volledigheid worden een aantal gegevens in dit voorbeeld meegenomen. Het betreft de gegevens:
 
   o	resource/name/version
+  
   o	receiver
+  
   o	dataSubject
 
 ### Globaal proces
