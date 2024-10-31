@@ -175,7 +175,58 @@ Een persoon heeft bij een gemeente een parkeervergunning in gebruik en wil de ge
 15. De gemeente toont de gegevens aan de persoon en logt dat deze gegevens zijn getoond aan de persoon.
 
 Schematisch ziet dit proces er als volgt uit:
-![Alt text](./medias/Parkeervergunning_Wijzigen_SchematischProces.png)
+```mermaid
+sequenceDiagram
+    box ivory Burger
+      participant B as Browser
+    end
+ 
+    box ivory Gemeente 
+      participant MO as MijnOmgeving
+      participant L1 as Log Gemeente
+    end 
+
+    box ivory Vergunningsoftware BV
+      participant V as Parkeeradmin
+      participant L2 as Log Vergunning
+    end 
+
+    box ivory RDW
+      participant BR as BRV
+      participant L3 as Log BRV
+    end 
+
+    rect lavender
+    B->>+MO: tonenVergunningenVraag
+    MO->>V: opvragenVergunningenVraag
+    V-->>MO: opvragenVergunningenAntwoord
+    V->>L2: Log gegevensverwerking (opvragenVergunningen)
+    MO-->>B: tonenVergunningenAntwoord
+    MO->>L1: Log gegevensverwerking (tonenVergunningen)
+    end
+
+    rect lavender
+    B->>+MO: wijzigenKentekenVraag
+    MO->>V: wijzigenKentekenVraag
+    V->>BR: controlerenKentekenVraag
+    BR-->>V: controlerenKentekenAntwoord
+    BR->>L3: Log gegevensverwerking (controlerenKenteken)
+    V->>L2: Log gegevensverwerking (controlerenKenteken)
+    V->>V: wijzigenKenteken
+    V-->>MO: wijzigenKentekenAntwoord
+    V->>L2: Log gegevensverwerking (wijzigenKenteken)
+    MO->>L1: Log gegevensverwerking (wijzigenKenteken)
+    end
+
+    rect lavender
+    B->>+MO: tonenVergunningenVraag
+    MO->>V: opvragenVergunningenVraag
+    V-->>MO: opvragenVergunningenAntwoord
+    V->>L2: Log gegevensverwerking (opvragenVergunningen)
+    MO-->>B: tonenVergunningenAntwoord
+    MO->>L1: Log gegevensverwerking (tonenVergunningen)
+    end
+```
 
 ### Logging van gegevens
 De volgende gegevens worden gelogd in de diverse logmomenten:
@@ -371,59 +422,6 @@ De relatie met de doelstellingen die gesteld zijn in de standaard Logboek datave
 
 5. *Als een applicatie aangeroepen kan worden vanuit een andere applicatie MOET de applicatie Trace Context metadata accepteren bij een dergelijke aanroepen deze metadata kunnen omzetten naar een foreign_operation bericht.* Bij een externe verwerking (bijvoorbeeld opvragenVergunningen) geeft de ‘MijnOmgeving’ de traceId en OperationId mee aan de Vergunningenapplicatie. De vergunningenapplicatie registreert de traceId en operationId beide als ‘foreignOperation’.
 
-```mermaid
-sequenceDiagram
-    box ivory Burger
-      participant B as Browser
-    end
- 
-    box ivory Gemeente 
-      participant MO as MijnOmgeving
-      participant L1 as Log Gemeente
-    end 
-
-    box ivory Vergunningsoftware BV
-      participant V as Parkeeradmin
-      participant L2 as Log Vergunning
-    end 
-
-    box ivory RDW
-      participant BR as BRV
-      participant L3 as Log BRV
-    end 
-
-    rect lavender
-    B->>+MO: tonenVergunningenVraag
-    MO->>V: opvragenVergunningenVraag
-    V-->>MO: opvragenVergunningenAntwoord
-    V->>L2: Log gegevensverwerking (opvragenVergunningen)
-    MO-->>B: tonenVergunningenAntwoord
-    MO->>L1: Log gegevensverwerking (tonenVergunningen)
-    end
-
-    rect lavender
-    B->>+MO: wijzigenKentekenVraag
-    MO->>V: wijzigenKentekenVraag
-    V->>BR: controlerenKentekenVraag
-    BR-->>V: controlerenKentekenAntwoord
-    BR->>L3: Log gegevensverwerking (controlerenKenteken)
-    V->>L2: Log gegevensverwerking (controlerenKenteken)
-    V->>V: wijzigenKenteken
-    V-->>MO: wijzigenKentekenAntwoord
-    V->>L2: Log gegevensverwerking (wijzigenKenteken)
-    MO->>L1: Log gegevensverwerking (wijzigenKenteken)
-    end
-
-    rect lavender
-    B->>+MO: tonenVergunningenVraag
-    MO->>V: opvragenVergunningenVraag
-    V-->>MO: opvragenVergunningenAntwoord
-    V->>L2: Log gegevensverwerking (opvragenVergunningen)
-    MO-->>B: tonenVergunningenAntwoord
-    MO->>L1: Log gegevensverwerking (tonenVergunningen)
-    end
-```
-
 ## Registratie Verhuizing - Eenvoudig, traditioneel systeem
 
 ### Situatieschets
@@ -465,7 +463,49 @@ Schematisch ziet dit proces er als volgt uit:
 12.	De gemeentelijke Balieapplicatie stuurt de persoonsgegevens naar de Browser en logt de aanvraag.
     
 Schematisch ziet dit proces er als volgt uit:
-![Alt text](./medias/Registratie_VerhuizingEenvoudigTraditioneel_SchematischProces.png)
+```mermaid
+sequenceDiagram
+    box ivory Baliemedewerker
+      participant B as Browser
+    end
+ 
+    box ivory Gemeente 
+      participant BA as Balieapplicatie
+      participant L1 as Log Gemeente
+    end 
+
+    box ivory BRP Registratie
+      participant BR as BRP
+      participant L2 as Log BRP
+    end 
+
+    rect lavender
+    B->>+BA: tonenNAWGegevensVraag
+    BA->>BR: opvragenPersoonsgegevensVraag
+    BR-->>BA: opvragenPersoonsgegevensAntwoord
+    BR->>L2: Log gegevensverwerking (opvragenPersoonsgegevens)
+    BA-->>B: tonenNAWGegevensAntwoord
+    BA->>L1: Log gegevensverwerking (tonenNAWGegegevens)
+    end
+
+    rect lavender
+    B->>BA: wijzigenNAWGegevensVraag
+    BA->>BR : wijzigenPersoonsgegevensVraag
+    BR-->>BR : wijzigenPersoonsgegevens
+    BR-->>BA: wijzigenPersoonsgegevensAntwoord
+    BR->>L2: Loggen verwerking (wijzigenPersoonsgegevens)
+    BA->>L1: Loggen verwerking (wijzigenPersoonsgegevens)
+    end
+
+    rect lavender
+    B->>BA: tonenNAWGegevensVraag
+    BA->>BR: opvragenPersoonsgegevensVraag
+    BR-->>BA: opvragenPersoonsgegevensAntwoord
+    BR->>L2: Loggen gegevensverwerking (opvragenPersoonsgegevens)
+    BA-->>B: tonenNAWGegevensAntwoord
+    BA->>L1: Loggen gegevensverwerking (tonenNAWGegevens)
+    End
+```
 
 ### Logging van gegevens
 De volgende gegevens worden gelogd in de diverse logmomenten:
@@ -614,50 +654,6 @@ De relatie met de doelstellingen die gesteld zijn in de standaard Logboek datave
 
 5. *Als een applicatie aangeroepen kan worden vanuit een andere applicatie MOET de applicatie Trace Context metadata accepteren bij een dergelijke aanroepen deze metadata kunnen omzetten naar een foreign_operation bericht.* Bij een externe verwerking (bijvoorbeeld opvragenPersoonsgegevens) geeft de Balieapplicatie de traceId en OperationId mee aan het BRP-systeem. Het BRP-systeem registreert de traceId en operationId beide als ‘foreignOperation’.
 
-```mermaid
-sequenceDiagram
-    box ivory Baliemedewerker
-      participant B as Browser
-    end
- 
-    box ivory Gemeente 
-      participant BA as Balieapplicatie
-      participant L1 as Log Gemeente
-    end 
-
-    box ivory BRP Registratie
-      participant BR as BRP
-      participant L2 as Log BRP
-    end 
-
-    rect lavender
-    B->>+BA: tonenNAWGegevensVraag
-    BA->>BR: opvragenPersoonsgegevensVraag
-    BR-->>BA: opvragenPersoonsgegevensAntwoord
-    BR->>L2: Log gegevensverwerking (opvragenPersoonsgegevens)
-    BA-->>B: tonenNAWGegevensAntwoord
-    BA->>L1: Log gegevensverwerking (tonenNAWGegegevens)
-    end
-
-    rect lavender
-    B->>BA: wijzigenNAWGegevensVraag
-    BA->>BR : wijzigenPersoonsgegevensVraag
-    BR-->>BR : wijzigenPersoonsgegevens
-    BR-->>BA: wijzigenPersoonsgegevensAntwoord
-    BR->>L2: Loggen verwerking (wijzigenPersoonsgegevens)
-    BA->>L1: Loggen verwerking (wijzigenPersoonsgegevens)
-    end
-
-    rect lavender
-    B->>BA: tonenNAWGegevensVraag
-    BA->>BR: opvragenPersoonsgegevensVraag
-    BR-->>BA: opvragenPersoonsgegevensAntwoord
-    BR->>L2: Loggen gegevensverwerking (opvragenPersoonsgegevens)
-    BA-->>B: tonenNAWGegevensAntwoord
-    BA->>L1: Loggen gegevensverwerking (tonenNAWGegevens)
-    End
-```
-
 ## Registratie verhuizing – Opvragen meerdere BSN’s
 
 ### Situatieschets
@@ -694,7 +690,31 @@ Schematisch ziet dit proces er als volgt uit:
 
 Schematisch ziet dit proces er als volgt uit:
 
-![Alt text](./medias/Registratie_VerhuizingOpvragenBSNs_SchematischProces.png)
+```mermaid
+sequenceDiagram
+    box ivory Baliemedewerker
+      participant B as Browser
+    end
+ 
+    box ivory Gemeente 
+      participant BA as Balieapplicatie
+      participant L1 as Log Gemeente
+    end 
+
+    box ivory BRP Registratie
+      participant BR as BRP
+      participant L2 as Log BRP
+    end 
+
+    rect lavender
+    B->>+BA: tonenNAWGegevensVraag
+    BA->>BR: opvragenPersoonsgegevensVraag
+    BR-->>BA: opvragenPersoonsgegevensAntwoord
+    BR->>L2: Log gegevensverwerking (opvragenPersoonsgegevens)
+    BA-->>B: tonenNAWGegevensAntwoord
+    BA->>L1: Log gegevensverwerking (tonenNAWGegegevens)
+    end
+```
 
 ### Logging van gegevens
 De volgende gegevens worden gelogd in de diverse logmomenten:
@@ -799,30 +819,4 @@ De relatie met de doelstellingen die gesteld zijn in de standaard Logboek datave
 4. *Als een Dataverwerking meerdere Betrokkenen heeft dan MOET de applicatie voor iedere betrokkene een aparte logregel wegschrijven. Een logregel kan naar 0 of 1 betrokkenen verwijzen.* In het voorbeeld gaat het om twee betrokkenen (dplCoreDataSubjectId), er wordt één logregel aangemaakt per BSN.
 
 5. *Als een applicatie aangeroepen kan worden vanuit een andere applicatie MOET de applicatie Trace Context metadata accepteren bij een dergelijke aanroepen deze metadata kunnen omzetten naar een foreign_operation bericht.* Bij een externe verwerking (bijvoorbeeld opvragenPersoonsgegevens) geeft de Balieapplicatie de traceId en OperationId mee aan het BRP-systeem. Het BRP-systeem registreert de traceId en operationId beide als ‘foreignOperation’.
-
-```mermaid
-sequenceDiagram
-    box ivory Baliemedewerker
-      participant B as Browser
-    end
- 
-    box ivory Gemeente 
-      participant BA as Balieapplicatie
-      participant L1 as Log Gemeente
-    end 
-
-    box ivory BRP Registratie
-      participant BR as BRP
-      participant L2 as Log BRP
-    end 
-
-    rect lavender
-    B->>+BA: tonenNAWGegevensVraag
-    BA->>BR: opvragenPersoonsgegevensVraag
-    BR-->>BA: opvragenPersoonsgegevensAntwoord
-    BR->>L2: Log gegevensverwerking (opvragenPersoonsgegevens)
-    BA-->>B: tonenNAWGegevensAntwoord
-    BA->>L1: Log gegevensverwerking (tonenNAWGegegevens)
-    end
-```
 
