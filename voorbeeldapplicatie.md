@@ -5,4 +5,5 @@ Dit project biedt een overzicht van gegevensverwerkingen binnen de overheid, waa
 Je kunt het logboek en de specifieke RVA-sectie hier bekijken:
 
 https://gitlab.com/digilab.overheid.nl/ecosystem/logboek-dataverwerkingen/rva
+<br>
 https://gitlab.com/digilab.overheid.nl/ecosystem/logboek-dataverwerkingen
