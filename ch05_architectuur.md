@@ -1,4 +1,0 @@
-# Architectuur
-
-@@@ todo architectuur uitwerken
-
