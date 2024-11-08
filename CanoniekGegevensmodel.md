@@ -1,3 +1,4 @@
+<!-- markdownlint-disable first-line-heading -->
 ## Canoniek Gegevensmodel
 
 Ter verduidelijking van de standaard is een Canoniek gegevensmodel uitgewerkt, dit gestandaardiseerd model voor datarepresentatie is  ontworpen om de attributen eenduidig en consistenter te maken. Het biedt een uniforme structuur en terminologie voor alle relevante gegevens in de standaard.
@@ -391,4 +392,3 @@ Ter verduidelijking van de standaard is een Canoniek gegevensmodel uitgewerkt, d
 | **Verplicht**                | Ja                                                           |
 | **Gebruikt in**              | Logboek                                                      |
 | **Enumeratiewaarden**        | Niet van toepassing                                          |
-
